@@ -1,0 +1,16 @@
+{
+    "Lua.diagnostics.globals": [
+        "EditModeManagerFrame",
+        "DEFAULT_CHAT_FRAME",
+        "PartyFrame",
+        "CompactPartyFrame",
+        "SlashCmdList",
+        "SELECTED_CHAT_FRAME",
+        "HUD_EDIT_MODE_SETTING_UNIT_FRAME_RAID_STYLE_PARTY_FRAMES",
+        "HUD_EDIT_MODE_MENU",
+        "HUD_EDIT_MODE_PARTY_FRAMES_LABEL",
+        "NamePlateDriverFrame",
+        "ShouldShowName",
+        "CUSTOM_CLASS_COLORS"
+    ]
+}

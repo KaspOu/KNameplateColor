@@ -1,0 +1,8 @@
+package-as: KNameplateColor
+
+manual-changelog: ChangeLog.txt
+
+license-output: License.txt
+
+ignore:
+    - .vscode
