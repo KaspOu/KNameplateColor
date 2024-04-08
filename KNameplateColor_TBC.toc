@@ -7,7 +7,7 @@
 ## Author: Kallye of Elune
 ## IconTexture: Interface\AddOns\KNameplateColor\Logo32
 
-## X-Category: Raid Frames, Interface Enhancements
+## X-Category: Unit Frames, Interface Enhancements
 ## X-License: MIT
 ## X-Website: https://bitbucket.org/KaspOu/KNameplateColor/
 ## X-Curse-Project-ID: 1000002
