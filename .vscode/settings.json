@@ -12,5 +12,27 @@
         "NamePlateDriverFrame",
         "ShouldShowName",
         "CUSTOM_CLASS_COLORS"
-    ]
+    ],
+    "peacock.color": "c16600",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#f48100",
+        "activityBar.background": "#f48100",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#40ffa5",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#f48100",
+        "sideBar.border": "#f48100",
+        "statusBar.background": "#c16600",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#f48100",
+        "statusBarItem.remoteBackground": "#c16600",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "tab.activeBorder": "#f48100",
+        "titleBar.activeBackground": "#c16600",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#c1660099",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    }
 }
