@@ -1,4 +1,4 @@
-## Interface: 100206
+## Interface: 100207
 ## Title: K Nameplate Color
 ## Title-frFR: K Nameplate Color
 ## Notes: Colors friendly players nameplates with class color. (outside instances)
