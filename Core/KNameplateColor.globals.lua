@@ -1,18 +1,58 @@
+local addonName, ns = ...
+ns.VERSION       = C_AddOns.GetAddOnMetadata(addonName, "Version");
+ns.VERSIONNR     = tonumber(gsub(ns.VERSION, "%D", ""), 10);
+local GetAddOnInfo = C_AddOns.GetAddOnInfo or GetAddOnInfo;
+ns.ADDON_NAME,ns.TITLE, ns.NOTES = GetAddOnInfo(addonName);
 
-KNC_VERSION       = C_AddOns.GetAddOnMetadata("KNameplateColor", "Version");
-KNC_VERSIONNR     = tonumber(gsub(KNC_VERSION, "%D", ""), 10);
-if (C_AddOns.GetAddOnInfo) then
-  KNC_ADDON_NAME,KNC_TITLE, KNC_NOTES = C_AddOns.GetAddOnInfo("KNameplateColor");
-else
-  KNC_ADDON_NAME,KNC_TITLE, KNC_NOTES = GetAddOnInfo("KNameplateColor");
+
+-- Kallye Raid Frames always loaded before
+if (KRF_TITLE) then
+  ns.CONFLICT_WITH, ns.CONFLICT = KRF_TITLE, true;
 end
 
-if (C_AddOns.GetAddOnInfo and C_AddOns.IsAddOnLoaded) then
-  KNC_CONFLICT_WITH, KNC_CONFLICT = select(2, C_AddOns.GetAddOnInfo("KallyeRaidFrames")), C_AddOns.IsAddOnLoaded("KallyeRaidFrames");
-else
-  _, KNC_CONFLICT_WITH, _, KNC_CONFLICT = GetAddOnInfo("KallyeRaidFrames");
+ns.IS_RETAIL = (WOW_PROJECT_ID == (WOW_PROJECT_MAINLINE or 1));
+
+ns.HAS_colorNameBySelection = ns.IS_RETAIL; -- colorNameBySelection, Since BfA (7)
+
+-- Prepare I18N, with chat colors
+ns.I18N = {};
+local l = ns.I18N;
+local function BCC(r, g, b) return string.format("|cff%02x%02x%02x", (r*255), (g*255), (b*255)); end
+
+l.RDL = BCC(1.0, 0.3, 0.3);
+l.YLL = BCC(1.0, 1.0, 0.5);
+l.CY  = BCC(0.5, 1.0, 1.0);
+
+
+--[[
+!  Default chat
+]]
+function ns.AddMsg(msg)
+	if (DEFAULT_CHAT_FRAME) then
+		DEFAULT_CHAT_FRAME:AddMessage(format("%s%s|r", l.YLL, msg or ""));
+	end
+end
+--[[
+!  Warning chat
+]]
+function ns.AddMsgWarn(msg)
+	if (DEFAULT_CHAT_FRAME) then
+		DEFAULT_CHAT_FRAME:AddMessage(format("%s%s|r", l.CY, msg or ""));
+	end
 end
 
-KNC_IS_RETAIL = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE);
+--[[
+!  Error chat
+]]
+function ns.AddMsgErr(msg)
+	if (DEFAULT_CHAT_FRAME) then
+		DEFAULT_CHAT_FRAME:AddMessage(format("%s%s: %s|r", l.RDL, ns.TITLE, msg or ""));
+	end
+end
 
-KNC_HAS_colorNameBySelection = KNC_IS_RETAIL; -- colorNameBySelection, Since BfA (7)
+KNC_TITLE = ns.TITLE; -- only global variable, for conflict detection
+
+--@do-not-package@
+-- DEBUG Purposes
+KNC = ns
+--@end-do-not-package@

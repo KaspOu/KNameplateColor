@@ -1,3 +1,6 @@
+v10.2.703
+- Code encapsulated / secured
+
 v10.2.702
 - Code organized
 

@@ -1,15 +1,16 @@
 -------------------------------------------------------------------------------
 -- French localization
 -------------------------------------------------------------------------------
+if (GetLocale() == "frFR") then    
+local _, ns = ...
+local l = ns.I18N;
 
-if (GetLocale() == "frFR") then
+l.VERS_TITLE    = format("%s %s", ns.TITLE, ns.VERSION);
 
-KNC_VERS_TITLE    = format("%s %s", KNC_TITLE, KNC_VERSION);
+l.CONFLICT_MESSAGE = "D\195\169sactiv\195\169 : Conflit avec %s";
+l.MSG_LOADED         = format("%s lanc\195\169 et actif", l.VERS_TITLE);
 
-KNC_CONFLICT_MESSAGE = "D\195\169sactiv\195\169 : Conflit avec %s";
-KNC_MSG_LOADED         = format("%s lanc\195\169 et actif", KNC_VERS_TITLE);
-
-KNC_INIT_FAILED = format("%s pas charg\195\169 correctement (conflit ?) !", KNC_VERS_TITLE);
+l.INIT_FAILED = format("%s pas charg\195\169 correctement (conflit ?) !", l.VERS_TITLE);
 
 --@do-not-package@
 -- https://code.google.com/archive/p/mangadmin/wikis/SpecialCharacters.wiki
