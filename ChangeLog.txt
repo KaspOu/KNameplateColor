@@ -1,3 +1,7 @@
+v10.2.704
+- Options for both allies & enemies
+- Code modulable (duplicated from Kallye Raid Frames)
+
 v10.2.703
 - Code encapsulated / secured
 

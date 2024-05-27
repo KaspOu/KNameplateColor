@@ -15,6 +15,7 @@ https://www.curseforge.com/wow/addons/kallye-raid-frames
  - Raid frames Transparency (out of range)
  
 
-K Nameplate Color is licensed under the GNU General Public License version 3.
+
 
 https://www.curseforge.com/members/kaspou/projects
+All rights reserved

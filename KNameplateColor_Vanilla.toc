@@ -3,8 +3,9 @@
 ## Title-frFR: K Nameplate Color
 ## Notes: Colors friendly players nameplates with class color. (outside instances)
 ## Notes-frFR: Colorie les barres de nom amies selon leur couleur de classe. (hors instance)
-## Version: 10.2.703
+## Version: 10.2.704
 ## Author: Kallye of Elune
+## SavedVariables: KNameplateColorOptions
 ## IconTexture: Interface\AddOns\KNameplateColor\Logo32
 
 ## X-Category: Unit Frames, Interface Enhancements
@@ -14,6 +15,7 @@
 
 Core\KNameplateColor.globals.lua
 Core\locales.xml
+Core\KNCWidgets.xml
 Core\KNameplateColorAPI.lua
-Core\KNameplateColor.lua
+Modules\modules.xml
 Core\KNameplateColor.xml
