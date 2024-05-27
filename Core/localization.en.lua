@@ -9,7 +9,7 @@ l.VERS_TITLE    = format("%s %s", ns.TITLE, ns.VERSION);
 l.CONFLICT_MESSAGE = "Disabled: Conflict with %s";
 
 l.SUBTITLE      = "Nameplates coloring";
-l.DESC          = "Color nameplates / names\n\n"
+l.DESC          = "Color nameplates / names "..l.YL.."(outside instances)|r\n\n"
 .." - Allies and Enemies\n\n"
 .." - Manages the name, but also the colors of the bars (Classic)\n\n"
 .." - By default, by class, or a color of your choice";

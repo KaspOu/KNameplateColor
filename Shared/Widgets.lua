@@ -1,10 +1,22 @@
 local _, ns = ...
-local l = ns.I18N
-
--- * avoid conflict override
-if ns.CONFLICT then return; end
 
 K_SHARED_UI = K_SHARED_UI or {};
+
+-- ! avoid conflict override
+if ns.CONFLICT then return; end
+
+-- * Share locales between shared ui files
+K_SHARED_UI.I18N = K_SHARED_UI.I18N or {}
+K_SHARED_UI.I18N[ns.ADDON_NAME] = K_SHARED_UI.I18N[ns.ADDON_NAME] or ns.I18N
+--- Shared ui locales access
+local function l(localeName)
+    for _, locales in pairs(K_SHARED_UI.I18N) do
+        if locales[localeName] then
+            return locales[localeName]
+        end
+    end
+    return nil
+end
 
 --- Function to display a tooltip
 --- @param frame frame The frame to which the tooltip is attached
@@ -13,13 +25,13 @@ K_SHARED_UI = K_SHARED_UI or {};
 --- @param anchor string The anchor of the tooltip (optional)
 --- @return nil
 local function showTooltip(frame, title, text, anchor)
-	title = l[title] or _G[title] or title;
-	text = l[text] or _G[text] or text or "";
+	title = l(title) or _G[title] or title;
+	text = l(text) or _G[text] or text or "";
 	text = text ~= title and text or "";
 
 	GameTooltip:SetOwner(frame, anchor or "ANCHOR_RIGHT");
 	if (title ~= "") then
-		GameTooltip:SetText(l.WH..title);
+		GameTooltip:SetText(l("WH")..title);
 		GameTooltip:AddLine(text, 1, 0.82, 0, 1);
 	else
 		GameTooltip:SetText(text, 1, 0.82, 0, 1);
@@ -43,7 +55,7 @@ function K_SHARED_UI.CheckboxWidget_OnLoad(self)
 	self.type = "checkbox";
 
 	local text = self:GetAttribute("text");
-	text = l[text] or _G[text] or text;
+	text = l(text) or _G[text] or text;
 
 	self.Text:SetText(text);
 end
@@ -70,7 +82,7 @@ function K_SHARED_UI.HeadingWidget_OnLoad (self)
 	self:SetPushedTexture(transparent);
 
 	local text = self:GetAttribute("text");
-	text = l[text] or _G[text] or text;
+	text = l(text) or _G[text] or text;
 
 	local label = self:CreateFontString(nil, "BACKGROUND", "GameFontNormal")
 	label:SetPoint("TOP")
@@ -149,11 +161,11 @@ end
 local function ColorWidget_ColorPickedCallback_Classic()
 	local newR, newG, newB = ColorPickerFrame:GetColorRGB();
 	local newA = 1 - OpacitySliderFrame:GetValue();
-	ColorPickerFrame.Self.SetColor(ColorPickerFrame.Self, { r = newR , g = newG, b = newB, a = newA });
+	ColorPickerFrame.Self:SetColor({ r = newR , g = newG, b = newB, a = newA });
 end
 local function ColorWidget_ColorCancelledCallback_Classic()
 	local newR, newG, newB, newA = unpack(ColorPickerFrame._previousValues);
-	ColorPickerFrame.Self.SetColor(ColorPickerFrame.Self, { r = newR , g = newG, b = newB, a = newA });
+	ColorPickerFrame.Self:SetColor({ r = newR , g = newG, b = newB, a = newA });
 end
 
 local function ColorWidget_SetColor(self, RGBA)
@@ -168,7 +180,7 @@ function K_SHARED_UI.ColorWidget_OnLoad (self)
 	self.type = "color";
 
 	local text = self:GetAttribute("text");
-	text = l[text] or _G[text] or text;
+	text = l(text) or _G[text] or text;
 
 	self._RGBA = { r=1, g=1, b=1, a=1}
 	self.SetColor = ColorWidget_SetColor;
@@ -248,7 +260,7 @@ function K_SHARED_UI.SliderWidget_OnLoad (self)
 	end
 
 	local text = self:GetAttribute("text") or "";
-	text = l[text] or _G[text] or text;
+	text = l(text) or _G[text] or text;
 
 	self._Value = 0;
 
@@ -265,7 +277,7 @@ function K_SHARED_UI.SliderWidget_OnLoad (self)
 end
 function K_SHARED_UI.SliderWidget_OnValueChanged(self, value)
 	local format = self:GetAttribute("format") or nil;
-	format = l[format] or _G[format] or format;
+	format = l(format) or _G[format] or format;
 	self.Label =self.Low;
 	local formatRatio = self:GetAttribute("formatRatio") or 1;
 	if format ~= nil then
@@ -275,7 +287,7 @@ function K_SHARED_UI.SliderWidget_OnValueChanged(self, value)
 	end
 	self:SetValue(value);
 end
-function K_SHARED_UI.SliderWidget_OnEnter(self)
+function K_SHARED_UI.SliderWidget_OnEnter(self,...)
 	if (not self:IsEnabled()) then return end;
 	local text = self:GetAttribute("text") or self:GetAttribute("title") or ""
 	local tooltip = self:GetAttribute("tooltip") or ""
@@ -319,14 +331,13 @@ local function DropDownWidget_Initialize(self, level, _)
 		else
 			val, txt, color = self:GetAttribute("value"..i), self:GetAttribute("text"..i), self:GetAttribute("color"..i)
 		end
-		txt = l[txt] or _G[txt] or txt;
-		tooltip = l[tooltip] or _G[tooltip] or tooltip;
-		color = l[color] or _G[color] or color;
+		txt = l(txt) or _G[txt] or txt;
+		tooltip = l(tooltip) or _G[tooltip] or tooltip;
+		color = l(color) or _G[color] or color;
 
 		info.isTitle = not val;
 		info.notCheckable = not val;
-
-		info.disabled = false;
+		info.disabled = self:GetAttribute("disabled"..i) == "true";
 		info.text = txt;
 		info.checked = (val == curValue)
 		info.menuList= val
@@ -345,7 +356,7 @@ local function DropDownWidget_Initialize(self, level, _)
 		i=i+1;
 	end
 	local txt = self:GetAttribute("text")
-	txt = l[txt] or _G[txt] or txt;
+	txt = l(txt) or _G[txt] or txt;
 	self.dd_title:SetText(txt);
 	UIDropDownMenu_SetWidth(self, self:GetAttribute("width") or autoWidth);
 	UIDropDownMenu_JustifyText(self, self:GetAttribute("justify") or "RIGHT")
@@ -355,7 +366,7 @@ local function DropDownWidget_SetValue(self, value)
 	while(self:GetAttribute("text"..i))
 	do
 		local key, val = self:GetAttribute("value"..i), self:GetAttribute("text"..i);
-		val = l[val] or _G[val] or val;
+		val = l(val) or _G[val] or val;
 		if (key == value) then
 			UIDropDownMenu_SetSelectedValue(self, key);
 			UIDropDownMenu_SetText(self, val);

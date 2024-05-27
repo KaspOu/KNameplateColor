@@ -10,7 +10,7 @@ l.VERS_TITLE    = format("%s %s", ns.TITLE, ns.VERSION);
 l.CONFLICT_MESSAGE = "D\195\169sactiv\195\169 : Conflit avec %s";
 
 l.SUBTITLE      = "Coloration des barres d'infos";
-l.DESC          = "Colore les barres d'infos\n\n"
+l.DESC          = "Colore les barres d'infos "..l.YL.."(hors instances)|r\n\n"
 .." - Alli\195\169es et Ennemies\n\n"
 .." - G\195\168re le nom, mais aussi les couleurs des barres (Classic)\n\n"
 .." - Par d\195\169faut, par classe, ou une couleur au choix";

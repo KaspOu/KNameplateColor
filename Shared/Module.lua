@@ -1,6 +1,10 @@
 --@ Class Module
 local _, ns = ...
 local l = ns.I18N;
+
+-- * avoid conflict override
+if ns.CONFLICT then return; end
+
 ns.MODULES = {};
 
 local function noop() end;

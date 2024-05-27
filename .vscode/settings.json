@@ -32,7 +32,18 @@
         "UIDROPDOWNMENU_MENU_LEVEL",
         "OpacitySliderFrame",
         "Settings",
-        "InterfaceOptionsFrame_OpenToCategory"
+        "InterfaceOptionsFrame_OpenToCategory",
+        "RAID_CLASS_COLORS",
+        "UnitSelectionColor",
+        "UnitIsFriend",
+        "hooksecurefunc",
+        "WOW_PROJECT_ID",
+        "strsub",
+        "select",
+        "UnitIsPlayer",
+        "WOW_PROJECT_MAINLINE",
+        "UnitPlayerControlled",
+        "UnitClass"
     ],
     "peacock.color": "c16600",
     "workbench.colorCustomizations": {

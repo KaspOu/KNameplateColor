@@ -1,7 +1,6 @@
 local _, ns = ...
-local l = ns.I18N;
 
--- * avoid conflict override
+-- ! avoid conflict override
 if ns.CONFLICT then return; end
 
 K_SHARED_UI = K_SHARED_UI or {};

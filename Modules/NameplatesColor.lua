@@ -1,6 +1,9 @@
 local _, ns = ...
 local l = ns.I18N;
 
+-- * avoid conflict override
+if ns.CONFLICT then return; end
+
 -- Fallback if not set in globals
 if ns.HAS_colorNameBySelection == nil then
     -- colorNameBySelection, Since BfA (7)
@@ -41,7 +44,11 @@ local function filterNameplateBarOption(option)
     return option
 end
 
-function ns.UpdateNameplateColor(frame)
+
+--- Updates the nameplate colors based on user settings.
+--- Hook CompactUnitFrame_UpdateName
+--- @param frame any The nameplate frame to update.
+local function Hook_CUF_UpdateName(frame)
     if frame:IsForbidden() or not UnitPlayerControlled(frame.displayedUnit) or FrameIsCompact(frame) then
         return
     end
@@ -78,7 +85,7 @@ end
 local function onSaveOptions(self, options)
     if not ns._NameplatesHooked and isEnabled(options) then
         ns._NameplatesHooked = true
-        hooksecurefunc("CompactUnitFrame_UpdateName", ns.UpdateNameplateColor);
+        hooksecurefunc("CompactUnitFrame_UpdateName", Hook_CUF_UpdateName);
     end
 end
 
@@ -88,3 +95,8 @@ end
 local module = ns.Module:new(onInit, "NameplatesColor");
 module:SetOnSaveOptions(onSaveOptions);
 module:SetGetInfo(getInfo);
+
+--@do-not-package@
+-- hooksecurefunc(NamePlateDriverFrame,"OnNamePlateCreated", ??
+-- Blizzard nameplates color test: local allowClassColor = frame.optionTable.allowClassColorsForNPCs or UnitIsPlayer(frame.unit) or (UnitTreatAsPlayerForDisplay and UnitTreatAsPlayerForDisplay(frame.unit));
+--@end-do-not-package@

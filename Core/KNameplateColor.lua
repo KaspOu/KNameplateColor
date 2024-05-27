@@ -60,7 +60,7 @@ local function OnEvent(self, event, ...)
 		isLoaded = true;
 
 		-- Load Module (standalone addon)
-		ns.MODULES[1]:Init(KNameplateColorOptions);
+		ns.MODULES[1]:Init(_G[ns.OPTIONS_NAME]);
 	end
 end
 
@@ -93,94 +93,6 @@ do
 	InitAddon(eventsFrame);
 end
 
-
-local function SaveOptions()
-	-- Auto detect options controls and save them
-	foreach(defaultOptions,
-		function (k, v)
-			local optionsObject = ns.FindControl(k);
-			if (optionsObject ~= nil) then
-				local control = optionsObject;
-				local previousValue = KNameplateColorOptions[k] or v;
-				local value = nil;
-
-				if control.type == "color" then
-					value = control:GetColor();
-				elseif control.type == "dropdown" then
-					value = control:GetValue();
-				elseif control.type == CONTROLTYPE_SLIDER then
-					value = control:GetValue();
-				elseif type(previousValue) == "boolean" then
-					value = control:GetChecked();
-				end
-				if value == nil then
-					ns.AddMsgErr(format("Incorrect field value, loading default value for %s...", k));
-					value = v;
-				end;
-				KNameplateColorOptions[k] = value;
-			end
-		end
-	);
-	
-	-- OnSave: Modules
-	foreach(ns.MODULES,
-		function(k, v)
-			ns.MODULES[k]:OnSaveOptions(KNameplateColorOptions);
-		end
-	);
-	if ns.optionsFrame ~= nil and ns.optionsFrame.HandleVis ~= nil then
-		ns.optionsFrame:Hide();
-	end
-end
-
-local function RefreshOptions()
-	if ns.optionsFrame ~= nil then
-		ns.optionsFrame:Show();
-		ns.optionsFrame.HandleVis = true;
-	end
-	-- Auto detect options controls and load them
-	foreach(defaultOptions,
-		function (k, v)
-			local optionsObject = ns.FindControl(k);
-			if (optionsObject ~= nil) then
-				local control = optionsObject;
-				local value = KNameplateColorOptions[k];
-				if value == nil then
-					value = v;
-					ns.AddMsgErr(format("Option not found ("..l.YLD.."%s|r), loading default value...", k));
-				end;
-
-				if control.type == "color" then
-					control:SetColor(value);
-				elseif control.type == "dropdown" then
-					control:SetValue(value);
-				elseif control.type == CONTROLTYPE_SLIDER then
-					control:SetValue(value);
-				elseif type(value) == "boolean" then
-					control:SetChecked(value);
-				else
-					ns.AddMsgDebug(format("Type non prevu pour %s - %s, type de valeur: %s", k, control.type or "unknown", type(value)));
-				end
-			end
-		end
-	);
-end
-
-function ns.FindControl(ControlName)
-	if ns.optionsFrame[ControlName] then
-		return ns.optionsFrame[ControlName];
-	else
-		local i = 1
-		while(ns.optionsFrame["Options"..i])
-		do
-			if (ns.optionsFrame["Options"..i][ControlName]) then
-				return ns.optionsFrame["Options"..i][ControlName];
-			end
-			i=i+1;
-		end
-	end
-end
-
 StaticPopupDialogs[ns.ADDON_NAME.."_CONFIRM_RESET"] = {
 	showAlert = true,
 	text = CONFIRM_RESET_SETTINGS,
@@ -206,6 +118,12 @@ function KNCUI.ShowEditMode(window)
 	ns.ShowEditMode(window);
 end
 
+local refreshOptions = function()
+	ns.RefreshOptions(defaultOptions);
+end
+local saveOptions = function()
+	ns.SaveOptions(defaultOptions, nil);
+end
 function KNCUI.OptionsContainer_OnLoad(self, scrollFrame, optionsFrame)
 	if ns.CONFLICT then
 		return;
@@ -213,10 +131,10 @@ function KNCUI.OptionsContainer_OnLoad(self, scrollFrame, optionsFrame)
 	ns.containerFrame = self;
 	ns.scrollFrame = scrollFrame;
 	ns.optionsFrame = optionsFrame;
-	RefreshOptions();
+	refreshOptions();
 	self.name = ns.TITLE;
-	self.okay = SaveOptions;
-	self.refresh = RefreshOptions;
+	self.okay = saveOptions;
+	self.refresh = refreshOptions;
 	InterfaceOptions_AddCategory(self);
 	if (ns.scrollFrame ~= nil) then
 		local BACKDROP_TOOLTIP = {
@@ -238,8 +156,7 @@ function KNCUI.OptionsContainer_OnLoad(self, scrollFrame, optionsFrame)
 
 	-- Localize FontStrings
 	foreach(self,
-		function (k, v)
-			local child = self[k];
+		function (_, child)
 			if type(child) == "table" and child:GetObjectType() == "FontString" then
 				child:SetText(l[child:GetText()]);
 			end
