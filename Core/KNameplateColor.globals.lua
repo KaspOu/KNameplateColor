@@ -3,7 +3,6 @@ ns.VERSION       = C_AddOns.GetAddOnMetadata(addonName, "Version");
 ns.VERSIONNR     = tonumber(gsub(ns.VERSION, "%D", ""), 10);
 local GetAddOnInfo = C_AddOns.GetAddOnInfo or GetAddOnInfo;
 ns.ADDON_NAME,ns.TITLE, ns.NOTES = GetAddOnInfo(addonName);
-ns.MODULES = {};
 
 
 -- Kallye Raid Frames always loaded before

@@ -1,3 +1,6 @@
+v10.2.705
+- Reorder shared code
+
 v10.2.704
 - Options for both allies & enemies
 - Code modulable (duplicated from Kallye Raid Frames)

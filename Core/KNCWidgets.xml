@@ -1,6 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-	<Include file="KNCWidgets.lua"/>
+	<Include file="KSHARED_Widgets.lua"/>
 	<CheckButton name="KNCUI_CheckboxWidget" inherits="OptionsBaseCheckButtonTemplate" virtual="true">
 		<Layers>
 			<Layer level="ARTWORK">
@@ -16,26 +16,26 @@
 			</Layer>
 		</Layers>
 		<Scripts>
-			<OnLoad> KNCUI.CheckboxWidget_OnLoad(self)</OnLoad>
-			<OnClick>KNCUI.CheckboxWidget_OnClick(self)</OnClick>
-			<OnEnter>KNCUI.CheckboxWidget_OnEnter(self)</OnEnter>
-			<OnLeave>KNCUI.CheckboxWidget_OnLeave(self)</OnLeave>
+			<OnLoad> K_SHARED_UI.CheckboxWidget_OnLoad(self)</OnLoad>
+			<OnClick>K_SHARED_UI.CheckboxWidget_OnClick(self)</OnClick>
+			<OnEnter>K_SHARED_UI.CheckboxWidget_OnEnter(self)</OnEnter>
+			<OnLeave>K_SHARED_UI.CheckboxWidget_OnLeave(self)</OnLeave>
 		</Scripts>
 	</CheckButton>
 	<CheckButton name="KNCUI_ColorWidget" inherits="KNCUI_CheckboxWidget" virtual="true">
 		<Scripts>
-			<OnLoad> KNCUI.ColorWidget_OnLoad(self)</OnLoad>
-			<OnClick>KNCUI.ColorWidget_OnClick(self)</OnClick>
-			<OnEnter>KNCUI.ColorWidget_OnEnter(self)</OnEnter>
-			<OnLeave>KNCUI.ColorWidget_OnLeave(self)</OnLeave>
+			<OnLoad> K_SHARED_UI.ColorWidget_OnLoad(self)</OnLoad>
+			<OnClick>K_SHARED_UI.ColorWidget_OnClick(self)</OnClick>
+			<OnEnter>K_SHARED_UI.ColorWidget_OnEnter(self)</OnEnter>
+			<OnLeave>K_SHARED_UI.ColorWidget_OnLeave(self)</OnLeave>
 		</Scripts>
 	</CheckButton>
 	<Slider name="KNCUI_SliderWidget" inherits="OptionsSliderTemplate" virtual="true">
 		<Scripts>
-			<OnLoad> KNCUI.SliderWidget_OnLoad(self)</OnLoad>
-			<OnEnter>KNCUI.SliderWidget_OnEnter(self)</OnEnter>
-			<OnLeave>KNCUI.SliderWidget_OnLeave(self)</OnLeave>
-			<OnValueChanged>KNCUI.SliderWidget_OnValueChanged(self, value)</OnValueChanged>
+			<OnLoad> K_SHARED_UI.SliderWidget_OnLoad(self)</OnLoad>
+			<OnEnter>K_SHARED_UI.SliderWidget_OnEnter(self)</OnEnter>
+			<OnLeave>K_SHARED_UI.SliderWidget_OnLeave(self)</OnLeave>
+			<OnValueChanged>K_SHARED_UI.SliderWidget_OnValueChanged(self, value)</OnValueChanged>
 		</Scripts>
 	</Slider>
 	<CheckButton name="KNCUI_HeadingWidget" inherits="OptionsBaseCheckButtonTemplate" virtual="true">
@@ -45,16 +45,16 @@
 			<Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT"><Offset x="0" y="0"/></Anchor>
 		</Anchors>
 		<Scripts>
-			<OnLoad> KNCUI.HeadingWidget_OnLoad(self)</OnLoad>
-			<OnClick>KNCUI.HeadingWidget_OnClick(self)</OnClick>
+			<OnLoad> K_SHARED_UI.HeadingWidget_OnLoad(self)</OnLoad>
+			<OnClick>K_SHARED_UI.HeadingWidget_OnClick(self)</OnClick>
 		</Scripts>
 	</CheckButton>
 	<Frame name="KNCUI_DropDownWidget" inherits="UIDropDownMenuTemplate" virtual="true">
 		<Size x="100" y="40" />
 		<Scripts>
-			<OnLoad> KNCUI.DropDownWidget_OnLoad(self)</OnLoad>
-			<OnEnter>KNCUI.DropDownWidget_OnEnter(self)</OnEnter>
-			<OnLeave>KNCUI.DropDownWidget_OnLeave(self)</OnLeave>
+			<OnLoad> K_SHARED_UI.DropDownWidget_OnLoad(self)</OnLoad>
+			<OnEnter>K_SHARED_UI.DropDownWidget_OnEnter(self)</OnEnter>
+			<OnLeave>K_SHARED_UI.DropDownWidget_OnLeave(self)</OnLeave>
 		</Scripts>
 	</Frame>
 <!--@do-not-package@-->
