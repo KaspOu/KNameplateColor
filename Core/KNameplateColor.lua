@@ -95,7 +95,7 @@ end
 
 StaticPopupDialogs[ns.ADDON_NAME.."_CONFIRM_RESET"] = {
 	showAlert = true,
-	text = CONFIRM_RESET_SETTINGS,
+	text = format("%s%s|r\n%s", l.YL, ns.TITLE, CONFIRM_RESET_SETTINGS),
 	button1 = ALL_SETTINGS,
 	-- button3 = CURRENT_SETTINGS,
 	button2 = CANCEL,

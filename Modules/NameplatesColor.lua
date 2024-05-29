@@ -38,7 +38,7 @@ local function applyBarColor(healthBar, useColorOption, color, customColor)
 end
 
 local function filterNameplateBarOption(option)
-    if (ns.HAS_colorNameBySelection) then
+    if (ns.HAS_colorNameBySelection and option == "1") then
         return "0"
     end
     return option

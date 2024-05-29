@@ -1,3 +1,6 @@
+v10.2.707
+- Retail bars support added
+
 v10.2.706
 - Clean code
 
