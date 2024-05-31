@@ -3,9 +3,8 @@ local _, ns = ...
 -- ! avoid conflict override
 if ns.CONFLICT then return; end
 
-K_SHARED_UI = K_SHARED_UI or {};
 
-function K_SHARED_UI.ManageNameplatesOptions()
+local function ManageNameplatesOptions()
 
     local frameData = {
         ["FriendsNameplates_Txt_UseColor"] = { link = "FriendsNameplates_Txt_Color", classEnabled = true },
@@ -25,3 +24,4 @@ function K_SHARED_UI.ManageNameplatesOptions()
         ns.OptionsSetShownAndEnable(colorWidget, dropDownWidget:GetValue() == "2",  0.1)
     end
 end
+K_SHARED_UI.AddRefreshOptions(ManageNameplatesOptions)

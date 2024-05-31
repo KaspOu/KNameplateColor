@@ -27,10 +27,6 @@ local defaultOptions = {
 	ShowMsgWarning = true,
 	ShowMsgError = false,
 };
-if not ns.CONFLICT then
-	-- if no conflict
-	ns.SetDefaultOptions(defaultOptions);
-end
 
 local function SLASH_command(msgIn)
 	if (not isLoaded) then
@@ -58,6 +54,9 @@ local function OnEvent(self, event, ...)
 	if (event == "ADDON_LOADED" and arg1 == ns.ADDON_NAME) then
 		self:UnregisterEvent("ADDON_LOADED");
 		isLoaded = true;
+
+		ns.SetDefaultOptions(defaultOptions);
+		ns.RefreshOptions(defaultOptions);
 
 		-- Load Module (standalone addon)
 		ns.MODULES[1]:Init(_G[ns.OPTIONS_NAME]);
@@ -119,7 +118,7 @@ function KNCUI.ShowEditMode(window)
 end
 
 local refreshOptions = function()
-	ns.RefreshOptions(defaultOptions);
+	ns.RefreshOptions(defaultOptions, true);
 end
 local saveOptions = function()
 	ns.SaveOptions(defaultOptions, nil);
@@ -131,7 +130,6 @@ function KNCUI.OptionsContainer_OnLoad(self, scrollFrame, optionsFrame)
 	ns.containerFrame = self;
 	ns.scrollFrame = scrollFrame;
 	ns.optionsFrame = optionsFrame;
-	refreshOptions();
 	self.name = ns.TITLE;
 	self.okay = saveOptions;
 	self.refresh = refreshOptions;
@@ -149,9 +147,6 @@ function KNCUI.OptionsContainer_OnLoad(self, scrollFrame, optionsFrame)
 
 		if (BackdropTemplateMixin) then Mixin(ns.scrollFrame, BackdropTemplateMixin) end
 		ns.scrollFrame:SetBackdrop(BACKDROP_TOOLTIP)
-	end
-	if ns.optionsFrame ~= nil and ns.optionsFrame.HandleVis ~= nil then
-		ns.optionsFrame:Hide();
 	end
 
 	-- Localize FontStrings

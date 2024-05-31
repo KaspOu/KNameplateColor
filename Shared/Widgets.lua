@@ -249,7 +249,18 @@ local function SliderWidget_SetValue (self, value)
 	self:SetDisplayValue(value);
 	self._Value = value;
 end
+
+local function toDecimal(number, decimals)
+	if tonumber(number) == nil or tonumber(decimals) == nil then
+		return number
+	end
+    return tonumber(format("%."..decimals.."f", number))
+end
 local function SliderWidget_GetValue(self)
+	local decimals = tonumber(self:GetAttribute("decimals")) or nil;
+	if decimals then
+		return toDecimal(self._Value, decimals)
+	end
 	return self._Value;
 end
 function K_SHARED_UI.SliderWidget_OnLoad (self)
@@ -265,8 +276,9 @@ function K_SHARED_UI.SliderWidget_OnLoad (self)
 	self._Value = 0;
 
 	self.SetDisplayValue = self.SetValue;
+	self.GetExactValue = self.GetValue;
 	self.SetValue = SliderWidget_SetValue
-	self.GetCurrentValue = SliderWidget_GetValue
+	self.GetValue = SliderWidget_GetValue
 	self.Text:SetFontObject("OptionsFontSmall");
 	self.Text:SetText(text);
 	self.High:Hide();

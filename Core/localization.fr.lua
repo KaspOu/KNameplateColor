@@ -13,7 +13,7 @@ l.SUBTITLE      = "Coloration des barres d'infos";
 l.DESC          = "Colore les barres d'infos "..l.YL.."(hors instances)|r\n\n"
 .." - Alli\195\169es et Ennemies\n\n"
 .." - G\195\168re la couleur du nom et de la barre\n\n"
-.." - Par d\195\169faut, par classe, ou une couleur au choix";
+.." - Par d\195\169faut, par classe, ou une couleur au choix\n\n"
 l.OPTIONS_TITLE = format("%s - Options", l.VERS_TITLE);
 
 l.MSG_LOADED         = format("%s lanc\195\169 et actif", l.VERS_TITLE);
