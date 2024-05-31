@@ -3,8 +3,11 @@ local _, ns = ...
 -- ! avoid conflict override
 if ns.CONFLICT then return; end
 
-
 local function ManageNameplatesOptions()
+    local activeCheckbox = ns.FindControl("ActiveNameplatesColor")
+    local headingLabel = ns.FindControl("LabelNameplatesColor")
+    local hideDisabledModules = ns.FindControl("HideDisabledModules")
+    local isEnabled = ns.IsModuleEnabled(activeCheckbox, headingLabel, _G[ns.OPTIONS_NAME].ActiveNameplatesColor, hideDisabledModules and hideDisabledModules:GetChecked())
 
     local frameData = {
         ["FriendsNameplates_Txt_UseColor"] = { link = "FriendsNameplates_Txt_Color", classEnabled = true },
@@ -21,7 +24,8 @@ local function ManageNameplatesOptions()
             dropDownWidget:SetAttribute("disabled2", "true")
         end
 
-        ns.OptionsSetShownAndEnable(colorWidget, dropDownWidget:GetValue() == "2",  0.1)
+        ns.OptionsEnable(dropDownWidget, isEnabled, .2)
+        ns.OptionsSetShownAndEnable(colorWidget, isEnabled and dropDownWidget:GetValue() == "2",  isEnabled)
     end
 end
 K_SHARED_UI.AddRefreshOptions(ManageNameplatesOptions)

@@ -49,7 +49,7 @@ end
 --- Hook CompactUnitFrame_UpdateName
 --- @param frame any The nameplate frame to update.
 local function Hook_CUF_UpdateName(frame)
-    if frame:IsForbidden() or not UnitPlayerControlled(frame.displayedUnit) or FrameIsCompact(frame) then
+    if frame:IsForbidden() or not UnitPlayerControlled(frame.displayedUnit) or FrameIsCompact(frame) or _G[ns.OPTIONS_NAME].ActiveNameplatesColor == false then
         return
     end
 
@@ -76,10 +76,13 @@ local function getInfo(self)
 end
 
 local function isEnabled(options)
-    return (options.FriendsNameplates_Txt_UseColor or "0") ~= "0"
-        or (options.FriendsNameplates_Bar_UseColor or "0") ~= "0"
-        or (options.EnemiesNameplates_Txt_UseColor or "0") ~= "0"
-        or (options.EnemiesNameplates_Bar_UseColor or "0") ~= "0"
+    return options.ActiveNameplatesColor ~= false
+		and (
+            (options.FriendsNameplates_Txt_UseColor or "0") ~= "0"
+            or (options.FriendsNameplates_Bar_UseColor or "0") ~= "0"
+            or (options.EnemiesNameplates_Txt_UseColor or "0") ~= "0"
+            or (options.EnemiesNameplates_Bar_UseColor or "0") ~= "0"
+        )
 end
 
 local function onSaveOptions(self, options)
