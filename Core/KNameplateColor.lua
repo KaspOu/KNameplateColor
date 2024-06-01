@@ -15,13 +15,13 @@ local defaultOptions = {
 	FriendsNameplates_Txt_Color = { r= .235, g= .941, b= 1, a = 1 },
 	FriendsNameplates_Bar_UseColor = ns.HAS_colorNameBySelection and "0" or "1",
 	FriendsNameplates_Bar_Color = { r= .235, g= .941, b= 1, a = 1 },
+	FriendsNameplates_PvpIcon = "faction",
 
 	EnemiesNameplates_Txt_UseColor = "1",
 	EnemiesNameplates_Txt_Color = { r= .87, g= 0, b= .05, a = 1 },
 	EnemiesNameplates_Bar_UseColor = "0",
 	EnemiesNameplates_Bar_Color = { r= .87, g= 0, b= .05, a = 1 },
-
-	Nameplates_ShowJcJ = false,
+	EnemiesNameplates_PvpIcon = "faction",
 
 	ShowMsgNormal = true,
 	ShowMsgWarning = true,
