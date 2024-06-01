@@ -1,3 +1,8 @@
+v11.0.002
+- PvP Icons
+    > Allies / Enemies
+    > None / Faction Icon / User Choice
+
 v11.0.001
 - The War Within Prepatch
 
