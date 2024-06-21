@@ -1,5 +1,6 @@
 v10.2.707
 - Retail bars support added
+- The War Within: ptr fix
 
 v10.2.706
 - Clean code
