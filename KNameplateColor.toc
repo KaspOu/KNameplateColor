@@ -1,9 +1,9 @@
-## Interface: 110000, 110002
+## Interface: 110002
 ## Title: |cff00ff00K|r Nameplate Color
 ## Title-frFR: |cff00ff00K|r Nameplate Color
 ## Notes: Apply class (or chosen) color to players nameplates and names. (allies / enemies, outside instances)
 ## Notes-frFR: Applique la couleur de classe (ou choisie) aux barres de nom et aux noms des joueurs. (allies / enemis, hors instance)
-## Version: 11.0.002
+## Version: 11.0.201
 ## Author: Kallye of Elune
 ## SavedVariables: KNameplateColorOptions
 ## IconTexture: Interface\AddOns\KNameplateColor\Logo32
