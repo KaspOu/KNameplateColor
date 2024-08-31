@@ -34,16 +34,8 @@
         "Settings",
         "InterfaceOptionsFrame_OpenToCategory",
         "RAID_CLASS_COLORS",
-        "UnitSelectionColor",
-        "UnitIsFriend",
-        "hooksecurefunc",
         "WOW_PROJECT_ID",
-        "strsub",
-        "select",
-        "UnitIsPlayer",
-        "WOW_PROJECT_MAINLINE",
-        "UnitPlayerControlled",
-        "UnitClass"
+        "WOW_PROJECT_MAINLINE"
     ],
     "peacock.color": "c16600",
     "workbench.colorCustomizations": {
@@ -66,5 +58,20 @@
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#c1660099",
         "titleBar.inactiveForeground": "#e7e7e799"
-    }
+    },
+    "Lua.runtime.version": "Lua 5.1",
+    "Lua.runtime.builtin": {
+        "basic": "disable",
+        "debug": "disable",
+        "io": "disable",
+        "math": "disable",
+        "os": "disable",
+        "package": "disable",
+        "string": "disable",
+        "table": "disable",
+        "utf8": "disable"
+    },
+    "Lua.workspace.library": [
+        "c:\\Users\\kaspo\\.cursor\\extensions\\ketho.wow-api-0.17.5\\Annotations"
+    ]
 }
