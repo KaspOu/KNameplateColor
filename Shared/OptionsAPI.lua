@@ -4,6 +4,8 @@ local l = ns.I18N;
 -- * avoid conflict override
 if ns.CONFLICT then return; end
 
+CONTROLTYPE_SLIDER = CONTROLTYPE_SLIDER or "slider"; -- removed since TWW (11)
+
 function ns.SetGradientBg(frame, color)
     local texture = frame:CreateTexture()
     texture:SetAllPoints(true)
@@ -82,16 +84,13 @@ function ns.SaveOptions(defaultOptions, ComputedReloadOptions)
     if ComputedReloadOptions ~= nil and ComputedReloadOptions() ~= LastComputedReloadOptions then
         ns.AddMsgWarn(format("%s: %s", ns.TITLE, l.OPTION_RELOAD_REQUIRED or ""), true);
     end
-    
+
     -- OnSave: Modules
     foreach(ns.MODULES,
         function(_, module)
             module:OnSaveOptions(_G[ns.OPTIONS_NAME]);
         end
     );
-    if ns.optionsFrame ~= nil and ns.optionsFrame.HandleVis ~= nil then
-        ns.optionsFrame:Hide();
-    end
 end
 
 function K_SHARED_UI.AddRefreshOptions(func)
@@ -99,9 +98,40 @@ function K_SHARED_UI.AddRefreshOptions(func)
     table.insert(K_SHARED_UI.optionsRefreshFuncs, func)
 end
 function K_SHARED_UI.RefreshOptions()
+    local previewOptions = nil
+
+    -- Get options for direct preview
+    if ns.optionsFrame:IsShown() then
+        previewOptions = {}
+        foreach(_G[ns.OPTIONS_NAME],
+            function (optionName, defaultValue)
+                local optionsObject = ns.FindControl(optionName);
+                if (optionsObject ~= nil) then
+                    local control = optionsObject;
+                    local previousValue = _G[ns.OPTIONS_NAME][optionName] or defaultValue;
+                    local value = nil;
+
+                    if control.type == "color" then
+                        value = control:GetColor();
+                    elseif control.type == "dropdown" then
+                        value = control:GetValue();
+                    elseif control.type == CONTROLTYPE_SLIDER then
+                        value = control:GetValue();
+                    elseif type(previousValue) == "boolean" then
+                        if (control.GetChecked) then
+                        value = control:GetChecked();
+                        end
+                    end
+                    previewOptions[optionName] = value;
+                end
+            end
+        );
+    end
+    --
+
     foreach(K_SHARED_UI.optionsRefreshFuncs,
         function (_, func)
-            func()
+            func(previewOptions)
         end
     );
 end
