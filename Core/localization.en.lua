@@ -13,6 +13,7 @@ l.DESC          = "Color nameplates / names "..l.YL.."(outside instances)|r\n\n"
 .." - Allies and Enemies\n\n"
 .." - Manages name and bar color\n\n"
 .." - By default, by class, or a color of your choice\n\n"
+.." - Add PvP icons |TInterface/PVPFrame/PVP-Currency-Alliance:16|t|TInterface/PVPFrame/PVP-Currency-Horde:16|t, and other choices...\n\n"
 l.OPTIONS_TITLE = format("%s - Options", l.VERS_TITLE);
 
 l.MSG_LOADED         = format("%s loaded and active", l.VERS_TITLE);
