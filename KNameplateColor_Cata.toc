@@ -1,9 +1,9 @@
-## Interface: 40400
+## Interface: 40400,40401
 ## Title: |cff00ff00K|r Nameplate Color
 ## Title-frFR: |cff00ff00K|r Nameplate Color
 ## Notes: Colors friendly players nameplates with class color. (outside instances)
 ## Notes-frFR: Colorie les barres de nom amies selon leur couleur de classe. (hors instance)
-## Version: 11.0.203
+## Version: 11.0.204
 ## Author: Kallye of Elune
 ## SavedVariables: KNameplateColorOptions
 ## IconTexture: Interface\AddOns\KNameplateColor\Logo32
