@@ -1,4 +1,4 @@
-## Interface: 110005, 110007
+## Interface: 110007
 ## Title: |cff00ff00K|r Nameplate Color
 ## Title-frFR: |cff00ff00K|r Nameplate Color
 ## Notes: Apply class (or chosen) color to players nameplates and names. (allies / enemies, outside instances)
