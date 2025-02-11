@@ -1,3 +1,8 @@
+v11.0.703
+- Nameplate default settings changed
+    > shown if different
+    > yellow for high level friends (instead of red)
+
 v11.0.702
 - Common widgets updated
 
