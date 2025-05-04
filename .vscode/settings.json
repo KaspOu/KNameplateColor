@@ -35,7 +35,9 @@
         "InterfaceOptionsFrame_OpenToCategory",
         "RAID_CLASS_COLORS",
         "WOW_PROJECT_ID",
-        "WOW_PROJECT_MAINLINE"
+        "WOW_PROJECT_MAINLINE",
+        "GetUnitName",
+        "SOUNDKIT"
     ],
     "peacock.color": "c16600",
     "workbench.colorCustomizations": {
@@ -72,6 +74,6 @@
         "utf8": "disable"
     },
     "Lua.workspace.library": [
-        "c:\\Users\\kaspo\\.cursor\\extensions\\ketho.wow-api-0.18.2\\Annotations"
+        "c:\\Users\\Utilisateur\\.cursor\\extensions\\ketho.wow-api-0.20.6\\Annotations\\Core"
     ]
 }
