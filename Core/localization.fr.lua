@@ -22,6 +22,7 @@ l.MSG_LOADED         = format("%s lanc\195\169 et actif", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s pas charg\195\169 correctement (conflit ?) !", l.VERS_TITLE);
 
+-- KNC START
 l.OPTION_OTHERS_HEADER = "Barres d'infos";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Par d\195\169faut";
 l.OPTION_NAMEPLATES_USECOLOR_CLASS = "Couleurs de classe";
@@ -56,6 +57,7 @@ l.OPTION_ENEMIESNAMEPLATES_PVPICONS = "Ic\195\180nes JcJ ennemies";
 l.OPTION_ENEMIESNAMEPLATES_PVPICONS_TOOLTIP = "Affiche les ic\195\180nes JcJ sur les noms ennemis.";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL = "Niveaux ennemis";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Affiche le niveau sur les barres d'info ennemies.";
+-- KNC END
 
 l.OPTION_RESET_OPTIONS = "R\195\169initialiser le profil";
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Afficher les messages";

@@ -21,6 +21,7 @@ l.MSG_LOADED         = format("%s loaded and active", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s not initialized correctly (conflict?)!", l.VERS_TITLE);
 
+-- KNC START
 l.OPTION_OTHERS_HEADER = "Nameplates";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Blizzard default colors";
 l.OPTION_NAMEPLATES_USECOLOR_CLASS ="Use class color";
@@ -55,6 +56,7 @@ l.OPTION_ENEMIESNAMEPLATES_PVPICONS = "Enemy PvP icons";
 l.OPTION_ENEMIESNAMEPLATES_PVPICONS_TOOLTIP = "Displays PvP icons on enemy names.";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL = "Enemy level";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Displays the level on enemy info bars.";
+-- KNC END
 
 l.OPTION_RESET_OPTIONS = "Reset options";
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Display messages";
