@@ -22,6 +22,7 @@ l.MSG_LOADED         = format("%s загружен и активен", l.VERS_TI
 
 l.INIT_FAILED = format("%s не инициализирован корректно (конфликт?)!", l.VERS_TITLE);
 
+-- KNC START
 l.OPTION_OTHERS_HEADER = "Таблички с именами";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Цвета Blizzard по умолчанию";
 l.OPTION_NAMEPLATES_USECOLOR_CLASS ="Использовать цвет класса";
@@ -56,6 +57,7 @@ l.OPTION_ENEMIESNAMEPLATES_PVPICONS = "PvP-иконки врагов";
 l.OPTION_ENEMIESNAMEPLATES_PVPICONS_TOOLTIP = "Отображает PvP-иконки на именах врагов.";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL = "Уровень врагов";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Отображает уровень на информационных полосах врагов.";
+-- KNC END
 
 l.OPTION_RESET_OPTIONS = "Сброс настроек";
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Отображать сообщения";
