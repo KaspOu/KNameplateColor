@@ -37,7 +37,15 @@
         "WOW_PROJECT_ID",
         "WOW_PROJECT_MAINLINE",
         "GetUnitName",
-        "SOUNDKIT"
+        "SOUNDKIT",
+        "UIParent",
+        "WrapTextInColorCode",
+        "BackdropTemplateMixin",
+        "Mixin",
+        "CreateColor",
+        "CopyTable",
+        "tContains",
+        "GameTooltip"
     ],
     "peacock.color": "c16600",
     "workbench.colorCustomizations": {
