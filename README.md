@@ -1,9 +1,14 @@
 # K Nameplate Color
 
-**Apply Class color to nameplates**
+**Apply Class / Chosen color to players nameplates bar/text**
 
-Classic / Cata: Apply class color on both friendly nameplates and names.
-On Retail: Apply class color only on name over friendly nameplates (Wow already manages such option)
+- PvP Icons (customizable)
+- Choose between class color or specific color for your nameplates
+ - Allies and Enemies apart
+ - Nameplates and names apart
+ - Show Players level option (players & npcs)
+- Nameplate Texture (players & npcs)
+- Not on players inside dungeons (Blizzard restriction)
 
 
 
