@@ -55,7 +55,7 @@ local function applyIconAndText(unit, name, pvpIconOption, showLevelOption, unde
         if (showLevelOption == "22" or ns._PlayerLevel ~= unitLevel) then
             levelShowed = unitLevel.." ";
         end
-        if (levelShowed ~= "") then
+        if (unitLevel > 0 and levelShowed ~= "") then
             if (showLevelOption == "12" or showLevelOption == "22") then
                 if (unitLevel < ns._PlayerLevel) then
                     levelShowed = WrapTextInColorCode(levelShowed, BCC(underLevelColor));
