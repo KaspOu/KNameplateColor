@@ -3,13 +3,22 @@
 ## Title-frFR: |cff00ff00K|r Nameplate Color
 ## Notes: Apply class (or chosen) color to players nameplates and names. (allies / enemies, outside instances)
 ## Notes-frFR: Applique la couleur de classe (ou choisie) aux barres de nom et aux noms des joueurs. (allies / enemis, hors instance)
-## Version: 11.2.002
+## Notes-ruRU: Применяет цвет класса (или выбранный) к индикаторам и именам игроков. (союзники / враги, вне подземелий)
+## Notes-deDE: Wendet Klassen- (oder gewählte) Farbe auf Spieler-Namensplaketten und -Namen an. (Verbündete / Feinde, außerhalb von Instanzen)
+## Notes-esES: Aplica el color de clase (o elegido) a las placas de nombre y nombres de los jugadores. (aliados / enemigos, fuera de instancias)
+## Notes-esMX: Aplica el color de clase (o elegido) a las placas de nombre y nombres de los jugadores. (aliados / enemigos, fuera de instancias)
+## Notes-itIT: Applica il colore di classe (o scelto) alle targhette e ai nomi dei giocatori. (alleati / nemici, fuori dalle istanze)
+## Notes-koKR: 플레이어 이름표와 이름에 직업 (또는 선택한) 색상을 적용합니다. (아군 / 적, 인스턴스 외부)
+## Notes-zhCN: 将职业（或选择的）颜色应用于玩家姓名板和名称。（盟友/敌人，副本外）
+## Notes-zhTW: 將職業（或選擇的）顏色應用於玩家姓名板和名稱。（盟友/敵人，副本外）
+
+## Version: 11.2.501
 ## Author: Kallye of Elune
 ## SavedVariables: KNameplateColorOptions
 ## IconTexture: Interface\AddOns\KNameplateColor\Logo32
 
 ## X-Category: Unit Frames, Interface Enhancements
-## X-Localizations: enUS, frFR, ruRU, esES
+## X-Localizations: enUS, frFR, ruRU, deDE, esES, esMX, itIT, koKR, zhCN, zhTW
 ## X-License: MIT
 ## X-Website: https://github.com/KaspOu/KNameplateColor/
 ## X-Curse-Project-ID: 1000002
