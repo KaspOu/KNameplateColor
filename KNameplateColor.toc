@@ -8,6 +8,7 @@
 ## Notes-esES: Aplica el color de clase (o elegido) a las placas de nombre y nombres de los jugadores. (aliados / enemigos, fuera de instancias)
 ## Notes-esMX: Aplica el color de clase (o elegido) a las placas de nombre y nombres de los jugadores. (aliados / enemigos, fuera de instancias)
 ## Notes-itIT: Applica il colore di classe (o scelto) alle targhette e ai nomi dei giocatori. (alleati / nemici, fuori dalle istanze)
+## Notes-ptBR: Aplica a cor da classe (ou escolhida) às placas de nome e nomes dos jogadores. (aliados / inimigos, fora de instâncias)
 ## Notes-koKR: 플레이어 이름표와 이름에 직업 (또는 선택한) 색상을 적용합니다. (아군 / 적, 인스턴스 외부)
 ## Notes-zhCN: 将职业（或选择的）颜色应用于玩家姓名板和名称。（盟友/敌人，副本外）
 ## Notes-zhTW: 將職業（或選擇的）顏色應用於玩家姓名板和名稱。（盟友/敵人，副本外）
@@ -18,7 +19,7 @@
 ## IconTexture: Interface\AddOns\KNameplateColor\Logo32
 
 ## X-Category: Unit Frames, Interface Enhancements
-## X-Localizations: enUS, frFR, ruRU, deDE, esES, esMX, itIT, koKR, zhCN, zhTW
+## X-Localizations: enUS, frFR, ruRU, deDE, esES, esMX, itIT, koKR, ptBR, zhCN, zhTW
 ## X-License: MIT
 ## X-Website: https://github.com/KaspOu/KNameplateColor/
 ## X-Curse-Project-ID: 1000002
