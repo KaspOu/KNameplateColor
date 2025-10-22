@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 -- Chinese localization (ChatGPT)
 -------------------------------------------------------------------------------
-if (GetLocale() ~= "zhCN" and GetLocale() ~= "zhTW") then return end
+
 local _, ns = ...
 local l = ns.I18N;
 l.VERS_TITLE    = format("%s %s", ns.TITLE, ns.VERSION);

@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 -- Korean localization (ChatGPT)
 -------------------------------------------------------------------------------
-if (GetLocale() ~= "koKR") then return end
+
 local _, ns = ...
 local l = ns.I18N;
 l.VERS_TITLE    = format("%s %s", ns.TITLE, ns.VERSION);
