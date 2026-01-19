@@ -1,4 +1,4 @@
-## Interface: 120000, 110205, 110207, 50501, 50502, 38000, 11508
+## Interface: 120000, 110205, 110207, 50501, 50502, 38000, 20505, 11508
 ## Title: |cff00ff00K|r Nameplate Color
 ## Title-frFR: |cff00ff00K|r Nameplate Color
 ## Notes: Apply class (or chosen) color to players nameplates and names. (allies / enemies, outside instances)
@@ -13,7 +13,7 @@
 ## Notes-zhCN: 将职业（或选择的）颜色应用于玩家姓名板和名称。（盟友/敌人，副本外）
 ## Notes-zhTW: 將職業（或選擇的）顏色應用於玩家姓名板和名稱。（盟友/敵人，副本外）
 
-## Version: 11.2.701
+## Version: 11.2.702
 ## Author: Kallye of Elune
 ## LoadSavedVariablesFirst: 1
 ## SavedVariables: KNameplateColorOptions
