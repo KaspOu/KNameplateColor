@@ -2,7 +2,7 @@
 ..\FrameXML\UI.xsd">
 	<Include file="OptionsNameplatesColor.lua" />
 	<Frame name="KNCOptionsNameplatesColor" virtual="true">
-		<Size x="550" y="310" />
+		<Size x="550" y="325" />
 		<Frames>
 			<CheckButton parentKey="LabelNameplatesColor" inherits="KNCUI_HeadingWidget">
 				<Anchors>
