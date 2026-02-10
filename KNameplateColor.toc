@@ -13,7 +13,7 @@
 ## Notes-zhCN: 将职业（或选择的）颜色应用于玩家姓名板和名称。（盟友/敌人，副本外）
 ## Notes-zhTW: 將職業（或選擇的）顏色應用於玩家姓名板和名稱。（盟友/敵人，副本外）
 
-## Version: 12.0.004
+## Version: 12.0.101
 ## Author: Kallye of Elune
 ## LoadSavedVariablesFirst: 1
 ## SavedVariables: KNameplateColorOptions
