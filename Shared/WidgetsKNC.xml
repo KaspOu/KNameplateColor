@@ -91,43 +91,4 @@
 			<OnLeave>K_SHARED_UI.DropDownWidget_OnLeave(self)</OnLeave>
 		</Scripts>
 	</Frame>
-<!--@do-not-package@-->
-<!--
-https://support.curseforge.com/en/support/solutions/articles/9000197281-automatic-packaging
-https://support.curseforge.com/en/support/solutions/articles/9000197952-preparing-the-packagemeta-file
-
-Blizzard Templates : https://github.com/tomrus88/BlizzardInterfaceCode
->> CompactUnitFrame: https://github.com/tomrus88/BlizzardInterfaceCode/blob/master/Interface/FrameXML/CompactUnitFrame.xml
-https://openclassrooms.com/forum/sujet/code-lua-pour-wow-99378
-
-https://warcraft.wiki.gg/wiki/XML_schema
-https://eu.forums.blizzard.com/en/wow/t/improving-default-blizzardui/2890
-
-Historique checkboxes:
- InterfaceOptionsBaseCheckButtonTemplate
- -> OptionsBaseCheckButtonTemplate (l'autre plantait sur  InterfaceOptionsPanel_CheckButton_OnClick(self))
- -> UICheckButtonTemplate, avec Size 26/26 (l'autre est en deprecated)
-
- Historique Slider
-	HorizontalSliderTemplate
-	-> UISliderTemplate: fonctionnait Retail + Classic mais plus Anniversary (barre manquante)
-
-	Puis Anniversary
-	-> MinimalSliderTemplate,UISliderTemplate: hériter des 2 fonctionne avec Classic / Anniversary / Retail
-
-	Dispos: MinimalSliderTemplate,UISliderTemplate,PropertySliderTemplate ?
-
-https://github.com/tomrus88/BlizzardInterfaceCode/blob/master/Interface/AddOns/Blizzard_FrameXML/DeprecatedTemplates.xml
-
-https://wowwiki-archive.fandom.com/wiki/UI_Object_UIDropDownMenu
-
-/fstack: Shows a Z-ordered (I think) list of all the UI frames under the cursor
-/etrace: Shows a running commentary of game events (and the parameters passed to them) as they happen
-/dump: Just dumps a variable's value to chat. This works better than print for tables.
-
-
-Wow Version:
-/run print(select(4, GetBuildInfo()))
--->
-<!--@end-do-not-package@-->
 </Ui>

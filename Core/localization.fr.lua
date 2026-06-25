@@ -69,7 +69,3 @@ l.OPTION_SHOWMSGWARNING = l.GYL.."Afficher les alertes";
 l.OPTION_SHOWMSGERR = l.GYL.."Afficher les erreurs";
 l.OPTION_WHATSNEW = "Nouveaut\195\169s";
 
---@do-not-package@
--- https://code.google.com/archive/p/mangadmin/wikis/SpecialCharacters.wiki
--- https://wowwiki.fandom.com/wiki/Localizing_an_addon
---@end-do-not-package@
