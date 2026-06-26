@@ -11,6 +11,10 @@ if (KRF_TITLE) then
 	ns.CONFLICT_WITH, ns.CONFLICT = KRF_TITLE, true;
 end
 
+--@do-not-package@
+-- Development icons
+ns.TITLE = format("%s|TInterface/PVPFrame/Icons/prestige-icon-8-3:16|t", ns.TITLE)
+--@end-do-not-package@
 
 ns.IS_RETAIL = (WOW_PROJECT_ID == (WOW_PROJECT_MAINLINE or 1));
 
@@ -77,3 +81,7 @@ KNCUI = {
 	scrollBarX = ns.IS_RETAIL and 6 or -2,
 };
 
+--@do-not-package@
+-- DEBUG Purposes
+KNC = ns
+--@end-do-not-package@

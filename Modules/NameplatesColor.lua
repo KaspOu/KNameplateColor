@@ -239,3 +239,11 @@ local module = ns.Module:new(onInit, "NameplatesColor");
 module:SetOnSaveOptions(onSaveOptions);
 module:SetGetInfo(getInfo);
 
+--@do-not-package@
+--[[
+hooksecurefunc(NamePlateDriverFrame,"OnNamePlateCreated", ??
+Blizzard nameplates color test: local allowClassColor = frame.optionTable.allowClassColorsForNPCs or UnitIsPlayer(frame.unit) or (UnitTreatAsPlayerForDisplay and UnitTreatAsPlayerForDisplay(frame.unit));
+Textures:
+https://github.com/Gethe/wow-ui-textures/tree/live/PVPFrame
+--]]
+--@end-do-not-package@
