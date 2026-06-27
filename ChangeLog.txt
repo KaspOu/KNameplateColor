@@ -1,3 +1,6 @@
+v12.0.702
+- Colors fixed (thx to korsal)
+
 v12.0.501
 - Midnight 12.0.5
 

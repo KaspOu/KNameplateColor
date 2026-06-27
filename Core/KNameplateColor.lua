@@ -1,6 +1,6 @@
 --[[
 	Hello to K Nameplate Color
-	Last version: 12.0.701 (2026-06-15T23:12:33Z)
+	Last version: @project-version@ (@project-date-iso@)
 ]]
 
 local _, ns = ...
