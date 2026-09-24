@@ -23,6 +23,7 @@
 ## X-Localizations: enUS, frFR, ruRU, deDE, esES, esMX, itIT, koKR, ptBR, zhCN, zhTW
 ## X-License: All Rights Reserved
 ## X-Website: https://github.com/KaspOu/KNameplateColor/
+## X-GameType: [Game]
 ## X-Curse-Project-ID: 1000002
 
 Core\KNameplateColor.globals.lua

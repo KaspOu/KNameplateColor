@@ -17,7 +17,7 @@ ns.TITLE = format("%s|TInterface/PVPFrame/Icons/prestige-icon-8-3:16|t", ns.TITL
 --@end-do-not-package@
 
 ns.IS_RETAIL = (WOW_PROJECT_ID == (WOW_PROJECT_MAINLINE or 1));
-ns.IS_FOREVER = ns.IS_RETAIL and select(4, GetBuildInfo()) < 20000
+ns.IS_FOREVER = C_AddOns.GetAddOnMetadata(addonName, "X-GameType") == "Camelot"
 
 ns.HAS_colorNameBySelection = ns.IS_RETAIL and not ns.IS_FOREVER; -- colorNameBySelection, Since BfA (7)
 
@@ -79,7 +79,7 @@ KNC_TITLE = ns.TITLE; -- global variable, for conflict detection
 
 KNCUI = {
 	l = l,
-	scrollBarX = ns.IS_RETAIL and 6 or -2,
+	scrollBarX = (ns.IS_RETAIL or ns.IS_FOREVER) and 6 or -2,
 };
 
 --@do-not-package@
