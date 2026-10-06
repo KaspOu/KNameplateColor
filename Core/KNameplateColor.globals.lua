@@ -17,7 +17,7 @@ ns.TITLE = format("%s|TInterface/PVPFrame/Icons/prestige-icon-8-3:16|t", ns.TITL
 --@end-do-not-package@
 
 ns.IS_RETAIL = (WOW_PROJECT_ID == (WOW_PROJECT_MAINLINE or 1));
-ns.IS_FOREVER = C_AddOns.GetAddOnMetadata(addonName, "X-GameType") == "Camelot"
+ns.IS_FOREVER = (WOW_PROJECT_ID == WOW_PROJECT_CAMELOT)
 
 ns.HAS_colorNameBySelection = ns.IS_RETAIL and not ns.IS_FOREVER; -- colorNameBySelection, Since BfA (7)
 

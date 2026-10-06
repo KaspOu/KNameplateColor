@@ -53,10 +53,6 @@ local function SLASH_command(msgIn)
 	end
 end
 
-local function SLASH_CLEAR_command()
-	SELECTED_CHAT_FRAME:Clear()
-end
-
 local function OnEvent(self, event, ...)
 	local arg1 = select(1, ...);
 	if (event == "ADDON_LOADED" and arg1 == ns.ADDON_NAME) then
@@ -65,6 +61,7 @@ local function OnEvent(self, event, ...)
 
 		ns.SetDefaultOptions(defaultOptions);
 		ns.RefreshOptions(defaultOptions);
+		ns.BindOptionControls(defaultOptions, nil);
 
 		-- Load Module (standalone addon)
 		ns.MODULES[1]:Init(_G[ns.OPTIONS_NAME]);
@@ -81,15 +78,12 @@ local function InitAddon(frame)
 		return;
 	end
 
-	SlashCmdList["CLEAR"] = SLASH_CLEAR_command;
-	SLASH_KNC_CLEAR1 = "/clear";
-
 	if (isInit or InCombatLockdown()) then return; end
 
 	isInit = true;
 	frame:SetScript("OnEvent",
-		function(self, event, ...)
-			OnEvent(self, event, ...);
+		function(frame, event, ...)
+			OnEvent(frame, event, ...);
 		end
 	);
 	frame:RegisterEvent("ADDON_LOADED");
@@ -106,7 +100,7 @@ StaticPopupDialogs[ns.ADDON_NAME.."_CONFIRM_RESET"] = {
 	button1 = ALL_SETTINGS,
 	-- button3 = CURRENT_SETTINGS,
 	button2 = CANCEL,
-	OnAccept = function()												
+	OnAccept = function()
 		ns.SetDefaultOptions(defaultOptions, true);
 		ReloadUI();
 	end,
@@ -128,10 +122,6 @@ end
 local refreshOptions = function()
 	ns.RefreshOptions(defaultOptions, true);
 end
-local saveOptions = function()
-	ns.SaveOptions(defaultOptions, nil);
-end
-
 function ns.InterfaceOptions_AddCategory(frame, addOn, position)
 	if not Settings or not Settings.RegisterCanvasLayoutSubcategory then
 		return InterfaceOptions_AddCategory(frame, addOn, position)
@@ -162,7 +152,7 @@ function KNCUI.OptionsContainer_OnLoad(self, scrollFrame, optionsFrame)
 	ns.scrollFrame = scrollFrame;
 	ns.optionsFrame = optionsFrame;
 	self.name = ns.TITLE;
-	self.okay = saveOptions;
+	self.okay = ns.FlushOptionsChanges -- options are already saved in real time
 	self.refresh = refreshOptions;
 	ns.InterfaceOptions_AddCategory(self);
 	if (ns.scrollFrame ~= nil) then
