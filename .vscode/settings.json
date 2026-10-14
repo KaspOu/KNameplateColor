@@ -45,7 +45,46 @@
         "CreateColor",
         "CopyTable",
         "tContains",
-        "GameTooltip"
+        "GameTooltip",
+        "tonumber",
+        "C_AddOns",
+        "gsub",
+        "WOW_PROJECT_CAMELOT",
+        "format",
+        "string",
+        "type",
+        "foreach",
+        "CreateFrame",
+        "InCombatLockdown",
+        "_G",
+        "select",
+        "UnitIsFriend",
+        "UnitExists",
+        "UnitLevel",
+        "UnitIsPVP",
+        "strsub",
+        "issecretvalue",
+        "C_NamePlate",
+        "ipairs",
+        "hooksecurefunc",
+        "pcall",
+        "CompactUnitFrame_UpdateName",
+        "UnitSelectionColor",
+        "UnitClass",
+        "CompactUnitFrame_UpdateHealthColor",
+        "UnitIsPlayer",
+        "UnitGUID",
+        "UnitName",
+        "UnitFactionGroup",
+        "table",
+        "setmetatable",
+        "C_Timer",
+        "next",
+        "pairs",
+        "math",
+        "tostring",
+        "PlaySound",
+        "unpack"
     ],
     "peacock.color": "c16600",
     "workbench.colorCustomizations": {
@@ -82,6 +121,6 @@
         "utf8": "disable"
     },
     "Lua.workspace.library": [
-        "c:\\Users\\Utilisateur\\.cursor\\extensions\\ketho.wow-api-0.20.6\\Annotations\\Core"
+        "c:\\Users\\Utilisateur\\.cursor\\extensions\\ketho.wow-api-0.20.7\\Annotations\\Core"
     ]
 }
