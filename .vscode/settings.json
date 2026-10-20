@@ -84,7 +84,8 @@
         "math",
         "tostring",
         "PlaySound",
-        "unpack"
+        "unpack",
+        "AddonCompartmentFrame"
     ],
     "peacock.color": "c16600",
     "workbench.colorCustomizations": {
