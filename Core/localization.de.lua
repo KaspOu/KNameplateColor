@@ -22,6 +22,7 @@ l.MSG_LOADED         = format("%s geladen und aktiv", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s nicht korrekt initialisiert (Konflikt?)!", l.VERS_TITLE);
 
+local required = l.YL.."*";
 -- KNC START
 l.OPTION_OTHERS_HEADER = "Infobalken";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Standard";
@@ -64,7 +65,12 @@ l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Zeigt das Level auf feindlic
 -- KNC END
 
 l.OPTION_RESET_OPTIONS = "Optionen zur\195\188cksetzen";
+l.OPTION_RELOAD_REQUIRED = "Einige \195\164nderungen erfordern einen Neuladen (tippen Sie: "..l.YL.."/reload|r )";
+l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": Optionen, die einen Neuladen erfordern";
+
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Nachrichten anzeigen";
 l.OPTION_SHOWMSGWARNING = l.GYL.."Warnungen anzeigen";
 l.OPTION_SHOWMSGERR = l.GYL.."Fehler anzeigen";
+l.OPTION_COMPARTMENT_FILTER = "Im Fachfilter anzeigen"..required;
+l.OPTION_COMPARTMENT_FILTER_TOOLTIP = "In der Addon-Liste oben rechts";
 l.OPTION_WHATSNEW = "Neuigkeiten";

@@ -10,6 +10,10 @@
 					<Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="20" y="-10" /></Offset></Anchor></Anchors>
 					<Size><AbsDimension x="550" y="30" /></Size>
 				</FontString>
+				<FontString parentKey="FooterNote" inherits="GameFontNormalSmall" justifyH="LEFT" justifyV="TOP" text="OPTIONS_ASTERIX">
+					<Anchors><Anchor point="BOTTOMRIGHT"><Offset><AbsDimension x="20" y="-10" /></Offset></Anchor></Anchors>
+					<Size><AbsDimension x="270" y="20" /></Size>
+				</FontString>
 			</Layer>
 		</Layers>
 		<Frames>
@@ -103,6 +107,17 @@
 								<Anchors>
 									<Anchor point="TOPLEFT" relativeKey="$parent.ShowMsgNormal" relativePoint="TOPLEFT">
 										<Offset x="340" y="0"/>
+									</Anchor>
+								</Anchors>
+							</CheckButton>
+							<CheckButton parentKey="AddonCompartmentFilter" inherits="KNCUI_CheckboxWidget">
+								<Attributes>
+									<Attribute name="text" value="OPTION_COMPARTMENT_FILTER" />
+									<Attribute name="tooltip" value="OPTION_COMPARTMENT_FILTER_TOOLTIP" />
+								</Attributes>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeKey="$parent.ShowMsgNormal" relativePoint="TOPLEFT">
+										<Offset x="0" y="20"/>
 									</Anchor>
 								</Anchors>
 							</CheckButton>

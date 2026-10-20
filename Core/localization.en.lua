@@ -21,6 +21,7 @@ l.MSG_LOADED         = format("%s loaded and active", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s not initialized correctly (conflict?)!", l.VERS_TITLE);
 
+local required = l.YL.."*";
 -- KNC START
 l.OPTION_OTHERS_HEADER = "Nameplates";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Blizzard default colors";
@@ -63,7 +64,12 @@ l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Displays the level on enemy 
 -- KNC END
 
 l.OPTION_RESET_OPTIONS = "Reset options";
+l.OPTION_RELOAD_REQUIRED = "Some changes require reloading (write: "..l.YL.."/reload|r )";
+l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": Options requiring reloading";
+
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Display messages";
 l.OPTION_SHOWMSGWARNING = l.GYL.."Display warnings";
 l.OPTION_SHOWMSGERR = l.GYL.."Display errors";
+l.OPTION_COMPARTMENT_FILTER = "Display in the Compartment Filter"..required;
+l.OPTION_COMPARTMENT_FILTER_TOOLTIP = "In addons list on top right";
 l.OPTION_WHATSNEW = "What's new";

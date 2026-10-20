@@ -34,6 +34,7 @@ local defaultOptions = {
 	ShowMsgNormal = true,
 	ShowMsgWarning = true,
 	ShowMsgError = false,
+	AddonCompartmentFilter = true,
 };
 
 local function SLASH_command(msgIn)
@@ -63,8 +64,12 @@ local function OnEvent(self, event, ...)
 		ns.RefreshOptions(defaultOptions);
 		ns.BindOptionControls(defaultOptions, nil);
 
-		-- Load Module (standalone addon)
-		ns.MODULES[1]:Init(_G[ns.OPTIONS_NAME]);
+		-- Load Modules
+		foreach(ns.MODULES,
+			function(_, module)
+				module:Init(_G[ns.OPTIONS_NAME]);
+			end
+        );
 	end
 end
 

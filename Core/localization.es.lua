@@ -21,6 +21,7 @@ l.MSG_LOADED         = format("%s cargado y activo", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s no se inicializ\195\179 correctamente (\194\191conflicto?)!", l.VERS_TITLE);
 
+local required = l.YL.."*";
 -- KNC START
 l.OPTION_OTHERS_HEADER = "Barras de informaci\195\179n";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Por defecto";
@@ -63,7 +64,12 @@ l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Muestra el nivel en las barr
 -- KNC END
 
 l.OPTION_RESET_OPTIONS = "Restablecer opci\195\179nes";
+l.OPTION_RELOAD_REQUIRED = "Algunos cambios requieren una recarga (escribe: "..l.YL.."/reload|r )";
+l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": Opciones que requieren una recarga";
+
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Mostrar mensajes";
 l.OPTION_SHOWMSGWARNING = l.GYL.."Mostrar advertencias";
 l.OPTION_SHOWMSGERR = l.GYL.."Mostrar errores";
+l.OPTION_COMPARTMENT_FILTER = "Mostrar en el Filtro de Compartimentos"..required;
+l.OPTION_COMPARTMENT_FILTER_TOOLTIP = "En la lista de addons en la parte superior derecha";
 l.OPTION_WHATSNEW = "Novedades";

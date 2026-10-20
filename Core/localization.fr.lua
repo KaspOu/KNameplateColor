@@ -22,6 +22,7 @@ l.MSG_LOADED         = format("%s lanc\195\169 et actif", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s pas charg\195\169 correctement (conflit ?) !", l.VERS_TITLE);
 
+local required = l.YL.."*";
 -- KNC START
 l.OPTION_OTHERS_HEADER = "Barres d'infos";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Par d\195\169faut";
@@ -64,9 +65,14 @@ l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Affiche le niveau sur les ba
 -- KNC END
 
 l.OPTION_RESET_OPTIONS = "R\195\169initialiser le profil";
+l.OPTION_RELOAD_REQUIRED = "Certains changements n\195\169cessitent un rechargement (\195\169crivez : "..l.YL.."/reload|r )";
+l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": Options n\195\169cessitant un rechargement";
+
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Afficher les messages";
 l.OPTION_SHOWMSGWARNING = l.GYL.."Afficher les alertes";
 l.OPTION_SHOWMSGERR = l.GYL.."Afficher les erreurs";
+l.OPTION_COMPARTMENT_FILTER = "Afficher dans le Compartment Filter"..required;
+l.OPTION_COMPARTMENT_FILTER_TOOLTIP = "Dans la liste des addons en haut à droite";
 l.OPTION_WHATSNEW = "Nouveaut\195\169s";
 
 --@do-not-package@

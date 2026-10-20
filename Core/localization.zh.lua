@@ -21,6 +21,7 @@ l.MSG_LOADED         = format("%s 已加载并激活", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s 未正确初始化（冲突？）！", l.VERS_TITLE);
 
+local required = l.YL.."*";
 -- KNC START
 l.OPTION_OTHERS_HEADER = "信息条";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."默认";
@@ -63,7 +64,12 @@ l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "在敌方信息条上显示�
 -- KNC END
 
 l.OPTION_RESET_OPTIONS = "重置选项";
+l.OPTION_RELOAD_REQUIRED = "某些更改需要重新加载 (输入："..l.YL.."/reload|r )";
+l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": 需要重新加载的选项";
+
 l.OPTION_SHOWMSGNORMAL = l.GYL.."显示消息";
 l.OPTION_SHOWMSGWARNING = l.GYL.."显示警告";
 l.OPTION_SHOWMSGERR = l.GYL.."显示错误";
+l.OPTION_COMPARTMENT_FILTER = "在隔间过滤器中显示"..required;
+l.OPTION_COMPARTMENT_FILTER_TOOLTIP = "在右上角的插件列表中";
 l.OPTION_WHATSNEW = "新功能";

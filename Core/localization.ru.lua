@@ -22,6 +22,7 @@ l.MSG_LOADED         = format("%s загружен и активен", l.VERS_TI
 
 l.INIT_FAILED = format("%s не инициализирован корректно (конфликт?)!", l.VERS_TITLE);
 
+local required = l.YL.."*";
 -- KNC START
 l.OPTION_OTHERS_HEADER = "Таблички с именами";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Цвета Blizzard по умолчанию";
@@ -64,7 +65,12 @@ l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Отображает уро�
 -- KNC END
 
 l.OPTION_RESET_OPTIONS = "Сброс настроек";
+l.OPTION_RELOAD_REQUIRED = "Некоторые изменения требуют перезагрузки (введите: "..l.YL.."/reload|r )";
+l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": Настройки, требующие перезагрузки";
+
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Отображать сообщения";
 l.OPTION_SHOWMSGWARNING = l.GYL.."Отображать предупреждения";
 l.OPTION_SHOWMSGERR = l.GYL.."Отображать ошибки";
+l.OPTION_COMPARTMENT_FILTER = "Показывать в фильтре отсеков"..required; -- ChatGPT
+l.OPTION_COMPARTMENT_FILTER_TOOLTIP = "В списке дополнений в правом верхнем углу"; -- ChatGPT
 l.OPTION_WHATSNEW = "Что нового";

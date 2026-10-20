@@ -22,6 +22,7 @@ l.MSG_LOADED         = format("%s iniciado e ativo", l.VERS_TITLE);
 
 l.INIT_FAILED = format("%s n\195\163o carregado corretamente (conflito ?) !", l.VERS_TITLE);
 
+local required = l.YL.."*";
 -- KNC START
 l.OPTION_OTHERS_HEADER = "Barras de informa\195\167\195\182es";
 l.OPTION_NAMEPLATES_USECOLOR_BLIZZARD = l.DEFAULT.."Padr\195\163o";
@@ -64,7 +65,12 @@ l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Exibe o n\195\173vel nas bar
 -- KNC END
 
 l.OPTION_RESET_OPTIONS = "Redefinir o perfil";
+l.OPTION_RELOAD_REQUIRED = "Algumas altera\195\167\195\182es exigem um recarregamento (digite: "..l.YL.."/reload|r )";
+l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": Op\195\167\195\182es que exigem um recarregamento";
+
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Exibir mensagens";
 l.OPTION_SHOWMSGWARNING = l.GYL.."Exibir alertas";
 l.OPTION_SHOWMSGERR = l.GYL.."Exibir erros";
+l.OPTION_COMPARTMENT_FILTER = "Exibir no Filtro de Compartimento"..required;
+l.OPTION_COMPARTMENT_FILTER_TOOLTIP = "Na lista de addons no canto superior direito";
 l.OPTION_WHATSNEW = "Novidades";
