@@ -10,11 +10,11 @@ l.VERS_TITLE    = format("%s %s", ns.TITLE, ns.VERSION);
 l.CONFLICT_MESSAGE = "Deaktiviert: Konflikt mit %s";
 
 l.SUBTITLE      = "Farbgebung der Infobalken";
-l.DESC          = "F\195\164rbt Namensplaketten / Namen "..l.YL.."(au\195\159erhalb von Instanzen)|r\n\n"
-.." - Verb\195\188ndete und Feinde\n\n"
+l.DESC          = "Färbt Namensplaketten / Namen "..l.YL.."(außerhalb von Instanzen)|r\n\n"
+.." - Verbündete und Feinde\n\n"
 .." - Verwaltet Namen- und Balkenfarbe\n\n"
-.." - Standardm\195\164\195\159ig, nach Klasse oder eine Farbe Ihrer Wahl\n\n"
-.." - PvP-Symbole hinzuf\195\188gen |TInterface/PVPFrame/PVP-Currency-Alliance:16|t|TInterface/PVPFrame/PVP-Currency-Horde:16|t, und weitere Optionen...\n\n"
+.." - Standardmäßig, nach Klasse oder eine Farbe Ihrer Wahl\n\n"
+.." - PvP-Symbole hinzufügen |TInterface/PVPFrame/PVP-Currency-Alliance:16|t|TInterface/PVPFrame/PVP-Currency-Horde:16|t, und weitere Optionen...\n\n"
 .." - Zeigt Spielerlevel an\n\n"
 l.OPTIONS_TITLE = format("%s - Optionen", l.VERS_TITLE);
 
@@ -31,9 +31,9 @@ l.OPTION_NAMEPLATES_USECOLOR_CUSTOM = "Ihre Farbauswahl: ";
 l.OPTION_NAMEPLATES_SHOWPVPICONS_BLIZZARD = l.DEFAULT.."Kein Symbol";
 l.OPTION_NAMEPLATES_SHOWPVPICONS_FACTION = "Fraktionssymbol |TInterface/PVPFrame/PVP-Currency-Alliance:16|t - |TInterface/PVPFrame/PVP-Currency-Horde:16|t";
 l.OPTION_NAMEPLATES_COLOR_UNDER = "Farbe, wenn niedriger";
-l.OPTION_NAMEPLATES_COLOR_UNDER_TOOLTIP = "W\195\164hlen Sie die Farbe des Levels, wenn es niedriger ist als Ihres";
-l.OPTION_NAMEPLATES_COLOR_OVER = "Farbe, wenn h\195\182her";
-l.OPTION_NAMEPLATES_COLOR_OVER_TOOLTIP = "W\195\164hlen Sie die Farbe des Levels, wenn es h\195\182her ist als Ihres";
+l.OPTION_NAMEPLATES_COLOR_UNDER_TOOLTIP = "Wählen Sie die Farbe des Levels, wenn es niedriger ist als Ihres";
+l.OPTION_NAMEPLATES_COLOR_OVER = "Farbe, wenn höher";
+l.OPTION_NAMEPLATES_COLOR_OVER_TOOLTIP = "Wählen Sie die Farbe des Levels, wenn es höher ist als Ihres";
 l.OPTION_NAMEPLATES_SHOWLEVEL_NEVER = l.DEFAULT.."Nie";
 l.OPTION_NAMEPLATES_SHOWLEVEL_NEVER_TOOLTIP = "Zeigt niemals das Level auf Infobalken an.";
 l.OPTION_NAMEPLATES_SHOWLEVEL_DIFFERENT = "Wenn anders als Ihres";
@@ -41,31 +41,31 @@ l.OPTION_NAMEPLATES_SHOWLEVEL_DIFFERENT_COLORED = "Wenn anders als Ihres, farbig
 l.OPTION_NAMEPLATES_SHOWLEVEL_ALWAYS = "Immer";
 l.OPTION_NAMEPLATES_SHOWLEVEL_ALWAYS_COLORED = "Immer, farbig";
 
-l.OPTION_FRIENDSNAMEPLATES_TXT_USECOLOR = "Verb\195\188ndete Namen";
-l.OPTION_FRIENDSNAMEPLATES_TXT_USECOLOR_TOOLTIP = "Farbe des Namens auf verb\195\188ndeten Infobalken (au\195\159erhalb von Instanzen)";
-l.OPTION_FRIENDSNAMEPLATES_BAR_USECOLOR = "Verb\195\188ndete Balken";
-l.OPTION_FRIENDSNAMEPLATES_BAR_USECOLOR_TOOLTIP = "Farbe der verb\195\188ndeten Infobalken (au\195\159erhalb von Instanzen)"
-l.OPTION_FRIENDSNAMEPLATES_BAR_TEXTURE = "Textur verb\195\188ndeter Balken"
-l.OPTION_FRIENDSNAMEPLATES_BAR_TEXTURE_TOOLTIP = "Textur der verb\195\188ndeten Infobalken (au\195\159erhalb von Instanzen)"
-l.OPTION_FRIENDSNAMEPLATES_PVPICONS = "Verb\195\188ndete PvP-Symbole";
-l.OPTION_FRIENDSNAMEPLATES_PVPICONS_TOOLTIP = "Zeigt PvP-Symbole auf verb\195\188ndeten Namen an.";
-l.OPTION_FRIENDSNAMEPLATES_TXT_SHOWLEVEL = "Verb\195\188ndete Level";
-l.OPTION_FRIENDSNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Zeigt das Level auf verb\195\188ndeten Infobalken an.";
+l.OPTION_FRIENDSNAMEPLATES_TXT_USECOLOR = "Verbündete Namen";
+l.OPTION_FRIENDSNAMEPLATES_TXT_USECOLOR_TOOLTIP = "Farbe des Namens auf verbündeten Infobalken (außerhalb von Instanzen)";
+l.OPTION_FRIENDSNAMEPLATES_BAR_USECOLOR = "Verbündete Balken";
+l.OPTION_FRIENDSNAMEPLATES_BAR_USECOLOR_TOOLTIP = "Farbe der verbündeten Infobalken (außerhalb von Instanzen)"
+l.OPTION_FRIENDSNAMEPLATES_BAR_TEXTURE = "Textur verbündeter Balken"
+l.OPTION_FRIENDSNAMEPLATES_BAR_TEXTURE_TOOLTIP = "Textur der verbündeten Infobalken (außerhalb von Instanzen)"
+l.OPTION_FRIENDSNAMEPLATES_PVPICONS = "Verbündete PvP-Symbole";
+l.OPTION_FRIENDSNAMEPLATES_PVPICONS_TOOLTIP = "Zeigt PvP-Symbole auf verbündeten Namen an.";
+l.OPTION_FRIENDSNAMEPLATES_TXT_SHOWLEVEL = "Verbündete Level";
+l.OPTION_FRIENDSNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Zeigt das Level auf verbündeten Infobalken an.";
 
 l.OPTION_ENEMIESNAMEPLATES_TXT_USECOLOR = "Feindliche Namen";
-l.OPTION_ENEMIESNAMEPLATES_TXT_USECOLOR_TOOLTIP = "Farbe des Namens auf feindlichen Infobalken (au\195\159erhalb von Instanzen)";
+l.OPTION_ENEMIESNAMEPLATES_TXT_USECOLOR_TOOLTIP = "Farbe des Namens auf feindlichen Infobalken (außerhalb von Instanzen)";
 l.OPTION_ENEMIESNAMEPLATES_BAR_USECOLOR = "Feindliche Balken";
-l.OPTION_ENEMIESNAMEPLATES_BAR_USECOLOR_TOOLTIP = "Farbe der feindlichen Infobalken (au\195\159erhalb von Instanzen)";
+l.OPTION_ENEMIESNAMEPLATES_BAR_USECOLOR_TOOLTIP = "Farbe der feindlichen Infobalken (außerhalb von Instanzen)";
 l.OPTION_ENEMIESNAMEPLATES_BAR_TEXTURE = "Textur feindlicher Balken"
-l.OPTION_ENEMIESNAMEPLATES_BAR_TEXTURE_TOOLTIP = "Textur der feindlichen Infobalken (au\195\159erhalb von Instanzen)"
+l.OPTION_ENEMIESNAMEPLATES_BAR_TEXTURE_TOOLTIP = "Textur der feindlichen Infobalken (außerhalb von Instanzen)"
 l.OPTION_ENEMIESNAMEPLATES_PVPICONS = "Feindliche PvP-Symbole";
 l.OPTION_ENEMIESNAMEPLATES_PVPICONS_TOOLTIP = "Zeigt PvP-Symbole auf feindlichen Namen an.";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL = "Feindliche Level";
 l.OPTION_ENEMIESNAMEPLATES_TXT_SHOWLEVEL_TOOLTIP = "Zeigt das Level auf feindlichen Infobalken an.";
 -- KNC END
 
-l.OPTION_RESET_OPTIONS = "Optionen zur\195\188cksetzen";
-l.OPTION_RELOAD_REQUIRED = "Einige \195\164nderungen erfordern einen Neuladen (tippen Sie: "..l.YL.."/reload|r )";
+l.OPTION_RESET_OPTIONS = "Optionen zurücksetzen";
+l.OPTION_RELOAD_REQUIRED = "Einige änderungen erfordern einen Neuladen (tippen Sie: "..l.YL.."/reload|r )";
 l.OPTIONS_ASTERIX = l.YL.."*|r"..l.WH..": Optionen, die einen Neuladen erfordern";
 
 l.OPTION_SHOWMSGNORMAL = l.GYL.."Nachrichten anzeigen";
