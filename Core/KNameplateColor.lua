@@ -7,6 +7,7 @@ local _, ns = ...
 local l = ns.I18N;
 local isInit = false;
 local isLoaded = false;
+local RequiredReloadOptionsString;
 
 local defaultOptions = {
 	Version = ns.VERSION,
@@ -35,6 +36,7 @@ local defaultOptions = {
 	ShowMsgWarning = true,
 	ShowMsgError = false,
 	AddonCompartmentFilter = true,
+	ForceEnglish = false,
 };
 
 local function SLASH_command(msgIn)
@@ -54,6 +56,10 @@ local function SLASH_command(msgIn)
 	end
 end
 
+function RequiredReloadOptionsString()
+	return tostring(_G[ns.OPTIONS_NAME].ForceEnglish)
+end
+
 local function OnEvent(self, event, ...)
 	local arg1 = select(1, ...);
 	if (event == "ADDON_LOADED" and arg1 == ns.ADDON_NAME) then
@@ -62,7 +68,7 @@ local function OnEvent(self, event, ...)
 
 		ns.SetDefaultOptions(defaultOptions);
 		ns.RefreshOptions(defaultOptions);
-		ns.BindOptionControls(defaultOptions, nil);
+		ns.BindOptionControls(defaultOptions, RequiredReloadOptionsString);
 
 		-- Load Modules
 		foreach(ns.MODULES,
